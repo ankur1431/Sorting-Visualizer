@@ -1,0 +1,98 @@
+/* General body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #212529;
+    padding: 0 20px 30px 0;
+    line-height: 1.4;
+}
+
+/* Flex container for sorting bars */
+.flex-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    transition: transform 1s ease;
+}
+
+/* Style for each sorting bar */
+.flex-item {
+    background: #0dcaf0;
+    border-radius: 4px;
+    width: 8px;
+    transition: height 0.1s ease, background 0.3s ease;
+}
+
+.flex-item:hover {
+    background: #0b5ed7;
+}
+
+/* Row layout for buttons and sliders */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Input container styling */
+#input {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: #adb5bd;
+}
+
+/* Sliders styling */
+#size, #speed {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 5px;
+}
+
+input[type="range"] {
+    width: 100px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #495057;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Styling for buttons */
+button {
+    color: #ffffff;
+    background-color: #198754;
+    border-color: #198754;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #157347;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #input {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
